@@ -1,0 +1,39 @@
+{
+  "name": "mean",
+  "version": "1.0.0",
+  "description": "mean application",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "g": "^2.0.1",
+    "mongoose": "^5.11.9",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "serve": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlekseyPn/mean.git"
+  },
+  "keywords": [
+    "angular",
+    "express",
+    "mongodb"
+  ],
+  "author": "AlekseyPn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlekseyPn/mean/issues"
+  },
+  "homepage": "https://github.com/AlekseyPn/mean#readme"
+}
