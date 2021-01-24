@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const passport = require('passport');
 
 const authRoutes = require('./routes/auth');
 const categoryRoutes = require('./routes/category');
@@ -20,6 +21,10 @@ mongoose
   .catch((e) => {
     console.error(e);
   });
+
+app.use(passport.initialize());
+require('./middleware/passport')(passport);
+
 app.use(require('morgan')('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
