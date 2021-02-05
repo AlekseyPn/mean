@@ -19,13 +19,17 @@
     "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "nodemon": "^2.0.6",
     "prettier": "^2.2.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "serve": "nodemon index.js"
+    "serve": "nodemon index.js",
+    "client:install": "npm i --prefix client",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently 'npm run serve' 'npm run client'"
   },
   "repository": {
     "type": "git",
